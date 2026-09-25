@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tổng hợp</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<header>
+    <h2 id="welcome"></h2>
+    <div>
+        <button id="themeToggleBtn" onclick="toggleTheme()">🌙 Tối</button>
+        <button onclick="backMenu()">Quay lại</button>
+        <button onclick="logout()">Đăng xuất</button>
+    </div>
+</header>
+ 
+<div id="progressContainer" class="progress-container"></div>
+ 
+<table>
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Danh mục</th>
+            <th>Công việc</th>
+            <th>Deadline</th>
+            <th>Trạng thái</th>
+            <th>Hoàn thành lúc</th>
+        </tr>
+    </thead>
+    <tbody id="summaryTableBody"></tbody>
+</table>
+ 
+<script src="js/summary.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/notification.js"></script>
+</body>
+</html>

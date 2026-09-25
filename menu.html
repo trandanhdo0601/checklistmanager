@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Menu</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+ 
+<h2 class="center">Chọn chức năng</h2>
+ 
+<div class="menu-container">
+    <button onclick="goTo('study')">📚 Học tập</button>
+    <button onclick="goTo('work')">💼 Công việc</button>
+    <button onclick="goTo('daily')">🏠 Hằng ngày</button>
+</div>
+ 
+<div class="center">
+    <button onclick="goSummary()">📊 Tổng hợp</button>
+</div>
+
+<div class="theme-settings">
+    <h3>🎨 Giao diện của bạn</h3>
+    <button id="themeToggleBtn" onclick="toggleTheme()">🌙 Tối</button>
+    <p>Ảnh nền cá nhân (tối đa 1.5MB):</p>
+    <input type="file" accept="image/*" onchange="handleThemeImageUpload(this)">
+    <button onclick="removeThemeImage()">Xóa ảnh nền</button>
+</div>
+
+<div class="theme-settings">
+    <h3>🔔 Thông báo deadline</h3>
+    <button id="notifToggleBtn" onclick="toggleNotifications()">🔕 Thông báo: Tắt</button>
+    <p>Nhắc trước khi đến hạn:</p>
+    <select id="notifReminderHours" onchange="setReminderHours(this.value)">
+        <option value="1">1 giờ</option>
+        <option value="3">3 giờ</option>
+        <option value="24">24 giờ</option>
+        <option value="72">3 ngày</option>
+    </select>
+    <p style="font-size:12px;color:var(--muted-text);margin-top:10px;">
+        Trên iPhone, cần "Thêm vào Màn hình chính" thì thông báo mới hoạt động (giới hạn của iOS).
+    </p>
+</div>
+ 
+<div class="center">
+    <button onclick="logout()">Đăng xuất</button>
+</div>
+ 
+<script src="js/menu.js"></script>
+<script src="js/theme.js"></script>
+<script src="js/notification.js"></script>
+</body>
+</html>
